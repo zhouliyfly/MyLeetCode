@@ -866,3 +866,196 @@ void TestCase::test93(std::ostream & os)
 		os << str << std::endl;
 }
 
+void TestCase::test131(std::ostream & os)
+{
+	std::string s = "aab";
+	auto res = Solution_131().partition(s);
+	for (const auto& v : res) {
+		for (const auto& s : v) {
+			os << s << " ";
+		}
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test46(std::ostream & os)
+{
+	std::vector<int> nums = { 1,2,3 };
+	auto res = Solution_46().permute(nums);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}	
+	os << std::endl;
+}
+
+void TestCase::test47(std::ostream & os)
+{
+	std::vector<int> nums = { 1,1,2 };
+	auto res = Solution_47().permuteUnique(nums);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test77(std::ostream & os)
+{
+	int n = 4;
+	int k = 2;
+	auto res = Solution_77().combine(n, k);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test39(std::ostream & os)
+{
+	int target = 11;
+	std::vector<int> nums = { 8,7,4,3 };
+	auto res = Solution_39_2().combinationSum(nums, target);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test40(std::ostream & os)
+{
+	int target = 5;
+	std::vector<int> candidates = { 2,5,2,1,2 };
+	auto res = Solution_40().combinationSum2(candidates, target);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test216(std::ostream & os)
+{
+	int k = 3;
+	int n = 7;
+	auto res = Solution_216().combinationSum3(k, n);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test78(std::ostream & os)
+{
+	std::vector<int> nums = { 1,2,3 };
+	auto res = Solution_78().subsets(nums);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test90(std::ostream & os)
+{
+	std::vector<int> nums = { 1,2,2 };
+	auto res = Solution_90().subsetsWithDup(nums);
+	for (const auto& vec : res) {
+		for (const auto& v : vec)
+			os << v << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test401(std::ostream & os)
+{
+	int n = 2;
+	auto res = Solution_401().readBinaryWatch(n);
+	for (const auto& s : res) {
+		os << s << std::endl;
+	}
+	os << std::endl;
+}
+
+void TestCase::test79(std::ostream & os)
+{
+	std::vector<std::vector<char>> board = {
+		{'A','B','C','E'},
+		{'S','F','C','S'},
+		{'A','D','E','E'}
+	};
+
+	std::string word = "ABCB";
+	os << Solution_79().exist(board, word) << std::endl;
+}
+
+void TestCase::test200(std::ostream & os)
+{
+	std::vector<std::string> vs = {
+		"11000", "11000", "00100", "00011"
+	};
+	std::vector<std::vector<char>> grid;
+	for (const auto& s : vs) {
+		grid.push_back(std::vector<char>(s.begin(), s.end()));
+	}
+	
+	os << Solution_200().numIslands(grid) << std::endl;
+}
+
+void TestCase::test130(std::ostream & os)
+{
+	std::vector<std::string> vs = {
+		"XXXX", "XOOX", "XXOX", "XOXX"
+	};
+	std::vector<std::vector<char>> board;
+	for (const auto& s : vs) {
+		board.push_back(std::vector<char>(s.begin(), s.end()));
+	}
+
+	for (const auto& v : board) {
+		for (const auto& c : v)
+			os << c << " ";
+		os << std::endl;
+	}
+
+	Solution_130().solve(board);
+
+	os << std::endl;
+	for (const auto& v : board) {
+		for (const auto& c : v)
+			os << c << " ";
+		os << std::endl;
+	}	
+}
+
+void TestCase::test417(std::ostream & os)
+{
+	std::vector<std::vector<int>> matrix = {
+		{1 ,  2 ,  2  , 3,  5},
+		{3  , 2  , 3,  4, 4},
+		{2  , 4 , 5,  3 ,  1},
+		{6 ,7 , 1 ,  4 ,  5 },
+		{5,  1 ,  1  , 2 ,  4 }
+	};
+
+	auto res = Solution_417_2().pacificAtlantic(matrix);
+
+	for (const auto& v : res) {
+		for (const auto& val : v)
+			os << val << ",";
+		os << std::endl;
+	}
+}
+

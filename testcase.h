@@ -82,6 +82,20 @@
 #include "236.h"
 #include "17.h"
 #include "93.h"
+#include "131.h"
+#include "46.h"
+#include "47.h"
+#include "77.h"
+#include "39.h"
+#include "40.h"
+#include "216.h"
+#include "78.h"
+#include "90.h"
+#include "401.h"
+#include "79.h"
+#include "200.h"
+#include "130.h"
+#include "417.h"
 
 #include "MyUtility.h"
 
@@ -129,8 +143,8 @@ public:
 	void test21(std::ostream& os);
 	void test24(std::ostream& os);
 	void test25(std::ostream& os);
-	void test147(std::ostream& os); //*** 对链表进行插入排序
-	void test148(std::ostream& os); //*** 排序链表, O(n log n) 时间复杂度和常数级空间复杂度
+	void test147(std::ostream& os); //对链表进行插入排序
+	void test148(std::ostream& os); //排序链表, O(n log n) 时间复杂度和常数级空间复杂度
 	void test237(std::ostream& os); // 删除链表中的节点(非尾节点)，O(1)时间复杂度
 	void test19(std::ostream& os);  //删除链表的倒数第N个节点（使用一趟扫描）
 	void test61(std::ostream& os);  //旋转链表
@@ -182,6 +196,24 @@ public:
 	/** 回溯 **/
 	void test17(std::ostream& os); //电话号码的字母组合
 	void test93(std::ostream& os); //复原IP地址
+	void test131(std::ostream& os); //分割回文串
+	void test46(std::ostream& os);  //全排列
+	void test47(std::ostream& os);  //全排列 II
+
+	/*** 回溯-剪枝 ***/
+	void test77(std::ostream& os); //组合
+	void test39(std::ostream& os); //组合总和
+	void test40(std::ostream& os); //组合总和 II
+	void test216(std::ostream& os); //组合总和 III
+	void test78(std::ostream& os); //子集
+	void test90(std::ostream& os); //子集 II
+	void test401(std::ostream& os); //二进制手表
+
+	/*** 回溯-二维 ***/
+	void test79(std::ostream& os);  //单词搜索
+	void test200(std::ostream& os); //岛屿数量
+	void test130(std::ostream& os); //被围绕的区域
+	void test417(std::ostream& os); //太平洋大西洋水流问题
 };
 #endif // !_TESTCASE_H
 
