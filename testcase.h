@@ -96,6 +96,9 @@
 #include "200.h"
 #include "130.h"
 #include "417.h"
+#include "51.h"
+#include "52.h"
+#include "37.h"
 
 #include "MyUtility.h"
 
@@ -214,6 +217,9 @@ public:
 	void test200(std::ostream& os); //岛屿数量
 	void test130(std::ostream& os); //被围绕的区域
 	void test417(std::ostream& os); //太平洋大西洋水流问题
+	void test51(std::ostream& os);  //N皇后
+	void test52(std::ostream& os);  //N皇后 II
+	void test37(std::ostream& os); //解数独
 };
 #endif // !_TESTCASE_H
 

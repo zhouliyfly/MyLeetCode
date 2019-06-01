@@ -34,6 +34,7 @@ public:
 	void printTree(std::ostream&, TreeNode*);
 
 	std::vector<std::string> getStringToVec(const std::string&);
+	std::vector<char> getStringToVecChar(const std::string & s);
 };
 
 enum class CommandType { Go, Print };

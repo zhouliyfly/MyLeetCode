@@ -132,3 +132,23 @@ std::vector<std::string> MyUtility::getStringToVec(const std::string & s)
 	}
 	return vec;
 }
+
+std::vector<char> MyUtility::getStringToVecChar(const std::string & s)
+{
+	std::vector<char> vec;
+	if (s.empty())
+		return vec;
+
+	std::string str;
+	if (s[0] == '[' && s[s.size() - 1] == ']') {
+		std::copy(s.begin() + 1, s.end() - 1, std::back_inserter(str));
+	}
+	else
+		str = s;
+
+	std::istringstream iss(str);
+	for (std::string str; std::getline(iss, str, ',');) {
+		vec.push_back(str[0]);
+	}
+	return vec;
+}

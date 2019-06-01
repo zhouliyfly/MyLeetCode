@@ -1059,3 +1059,57 @@ void TestCase::test417(std::ostream & os)
 	}
 }
 
+void TestCase::test51(std::ostream & os)
+{
+	int n = 4;
+	auto res = Solution_51().solveNQueens(n);
+	for (const auto& v : res) {
+		for (const auto& s : v)
+			os << s << std::endl;
+		os << std::endl;
+	}
+}
+
+void TestCase::test52(std::ostream & os)
+{
+	int n = 8;
+	os << Solution_52().totalNQueens(n);
+}
+
+void TestCase::test37(std::ostream & os)
+{
+	std::vector<std::vector<std::string>> s = {
+		{ "5", "3", ".", ".", "7", ".", ".", ".", "." },
+		{"6",".",".","1","9","5",".",".","."},
+		{".","9","8",".",".",".",".","6","."},
+		{"8",".",".",".","6",".",".",".","3"},
+		{"4",".",".","8",".","3",".",".","1"},
+		{"7",".",".",".","2",".",".",".","6"},
+		{".","6",".",".",".",".","2","8","."},
+		{".",".",".","4","1","9",".",".","5"},
+		{".",".",".",".","8",".",".","7","9"}
+	};
+
+	std::vector<std::vector<char>> board(9, std::vector<char>(9, '.'));
+	for (size_t i = 0; i != s.size(); ++i) {
+		for (size_t j = 0; j != s[i].size(); ++j) {
+			if (s[i][j] != ".")
+				board[i][j] = s[i][j][0];
+		}
+	}
+	for (const auto& v : board) {
+		for (const auto& str : v)
+			os << str << " ";
+		os << std::endl;
+	}
+	os << std::endl;
+
+	Solution_37_2().solveSudoku(board);
+
+	for (const auto& v : board) {
+		for (const auto& str : v)
+			os << str << " ";
+		os << std::endl;
+	}
+}
+
